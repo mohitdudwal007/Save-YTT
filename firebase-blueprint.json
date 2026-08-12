@@ -1,0 +1,52 @@
+{
+  "entities": {
+    "conversions": {
+      "title": "Conversions",
+      "description": "Log of recent video conversions and downloads",
+      "type": "object",
+      "properties": {
+        "videoId": {
+          "type": "string",
+          "description": "YouTube video ID"
+        },
+        "title": {
+          "type": "string",
+          "description": "Title of the video"
+        },
+        "durationFormatted": {
+          "type": "string",
+          "description": "Formatted duration of the media"
+        },
+        "downloadUrl": {
+          "type": "string",
+          "description": "Converted audio download URL"
+        },
+        "timestamp": {
+          "type": "string",
+          "description": "ISO timestamp of conversion"
+        }
+      },
+      "required": ["videoId", "title", "timestamp"]
+    },
+    "appConfig": {
+      "title": "App Config",
+      "description": "Secure storage for API keys and configurations",
+      "type": "object",
+      "properties": {
+        "rapidApiKey": {
+          "type": "string",
+          "description": "RapidAPI Key"
+        },
+        "rapidApiHost": {
+          "type": "string",
+          "description": "RapidAPI Host"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "ISO timestamp when config was updated"
+        }
+      },
+      "required": ["rapidApiKey", "rapidApiHost"]
+    }
+  }
+}
